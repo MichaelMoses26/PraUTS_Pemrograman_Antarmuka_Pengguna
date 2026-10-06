@@ -1,0 +1,551 @@
+/* Mengatur ukuran box setiap elemen */
+* {
+    box-sizing: border-box;
+}
+
+/* Mengaktifkan scroll halaman yang halus */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Mendefinisikan warna utama website */
+:root {
+    --navy: #172554;
+    --navy-dark: #0f172a;
+    --teal: #0f766e;
+    --teal-dark: #115e59;
+    --gold: #d97706;
+    --gold-light: #fef3c7;
+    --cream: #fffdf7;
+    --bg: #f4f7fb;
+    --card: #ffffff;
+    --border: #dbe3ec;
+    --text: #243047;
+    --muted: #667085;
+}
+
+/* Mengatur tampilan dasar halaman */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    line-height: 1.55;
+}
+
+/* Menghilangkan garis bawah pada link */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Mengatur layout header */
+.site-header {
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 24px;
+    background: var(--navy);
+    color: #ffffff;
+    border-bottom: 4px solid var(--gold);
+}
+
+/* Menempatkan logo di tengah header */
+.header-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Menampilkan logo tanpa terpotong */
+.header-brand img {
+    display: block;
+    width: 190px;
+    height: 70px;
+    object-fit: contain;
+    object-position: center;
+    background: #ffffff;
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Menempatkan teks header di sisi kanan */
+.header-text {
+    text-align: right;
+}
+
+/* Mengatur judul HomeFinder */
+.header-text h1 {
+    margin: 0;
+    font-size: 29px;
+    letter-spacing: 0.2px;
+}
+
+/* Mengatur slogan HomeFinder */
+.header-text p {
+    margin: 5px 0 0;
+    color: #dce5ff;
+    opacity: 0.9;
+    font-size: 14px;
+}
+
+/* Mengatur navigasi utama */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    min-height: 50px;
+    background: var(--teal);
+}
+
+/* Mengatur tampilan item navigasi */
+.main-nav > a,
+.nav-dropdown > a {
+    display: block;
+    padding: 14px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+    transition: background-color 0.25s ease, opacity 0.25s ease, border-color 0.25s ease;
+}
+
+/* Mengatur efek hover pada item navigasi */
+.main-nav > a:hover,
+.nav-dropdown > a:hover {
+    background: var(--teal-dark);
+    border-bottom-color: var(--gold);
+    opacity: 0.95;
+}
+
+/* Menentukan posisi dropdown */
+.nav-dropdown {
+    position: relative;
+}
+
+/* Menyembunyikan submenu secara default */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--gold);
+    box-shadow: 0 10px 22px rgba(23, 37, 84, 0.16);
+    z-index: 20;
+}
+
+/* Mengatur link di dalam submenu */
+.submenu a {
+    display: block;
+    padding: 10px 14px;
+    color: var(--text);
+    transition: background-color 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Mengatur efek hover pada submenu */
+.submenu a:hover {
+    background: #ecfdf5;
+    padding-left: 18px;
+}
+
+/* Menampilkan submenu saat di-hover */
+.nav-dropdown:hover .submenu {
+    display: block;
+}
+
+/* Mengatur layout utama menjadi dua kolom */
+.main-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(220px, 1fr);
+    gap: 24px;
+    max-width: 1180px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+/* Menjaga lebar konten agar tetap sesuai */
+.content-area,
+.sidebar {
+    min-width: 0;
+}
+
+/* Mengatur garis bawah dan jarak judul section */
+.section-title {
+    border-bottom: 2px solid var(--gold);
+    margin-bottom: 12px;
+}
+
+/* Mengatur tampilan judul section */
+.section-title h2 {
+    margin: 0 0 8px;
+    font-size: 19px;
+    color: var(--navy);
+}
+
+/* Mengatur gallery dalam tiga kolom */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+/* Mengatur tampilan kartu rumah */
+.gallery-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(23, 37, 84, 0.07);
+}
+
+/* Mengatur ukuran gambar pada kartu rumah */
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+/* Mengatur efek transparansi gambar saat hover */
+.gallery-card:hover img {
+    opacity: 0.84;
+}
+
+/* Mengatur jarak isi kartu */
+.card-content {
+    padding: 12px 13px 15px;
+}
+
+/* Mengatur judul pada kartu rumah */
+.card-content h3 {
+    margin: 0 0 6px;
+    font-size: 16px;
+    color: var(--navy);
+}
+
+/* Mengatur teks informasi pada kartu rumah */
+.card-content p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Menyusun item sidebar secara vertikal */
+.sidebar {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-content: start;
+}
+
+/* Mengatur tampilan kotak sidebar */
+.sidebar-box {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(23, 37, 84, 0.05);
+}
+
+/* Mengatur judul pada kotak sidebar */
+.sidebar-box h3 {
+    margin: 0 0 10px;
+    padding-bottom: 7px;
+    border-bottom: 2px solid var(--gold-light);
+    color: var(--navy);
+    font-size: 16px;
+}
+
+/* Mengatur teks pada sidebar */
+.sidebar-box p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* Mengatur link pada sidebar */
+.sidebar-box a {
+    display: block;
+    color: var(--teal-dark);
+    margin: 7px 0;
+    font-size: 13px;
+    transition: opacity 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Mengatur efek hover pada link sidebar */
+.sidebar-box a:hover {
+    opacity: 0.68;
+    padding-left: 5px;
+}
+
+/* Mengatur tampilan footer */
+.site-footer {
+    margin-top: 34px;
+    background: var(--navy-dark);
+    color: #ffffff;
+    border-top: 4px solid var(--teal);
+}
+
+/* Mengatur footer menjadi tiga kolom */
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 30px 24px 20px;
+}
+
+/* Menjaga isi setiap kolom footer */
+.footer-top section {
+    min-width: 0;
+}
+
+/* Mengatur judul pada footer */
+.footer-top h3 {
+    margin: 0 0 10px;
+    color: #fff7ed;
+    font-size: 16px;
+}
+
+/* Mengatur teks dan link pada footer */
+.footer-top p,
+.footer-top a {
+    margin: 6px 0;
+    color: #c8d0df;
+    font-size: 13px;
+}
+
+/* Mengatur link pada footer */
+.footer-top a {
+    display: block;
+    transition: opacity 0.2s ease, padding-left 0.2s ease;
+}
+
+/* Mengatur efek hover pada link footer */
+.footer-top a:hover {
+    opacity: 0.72;
+    padding-left: 4px;
+}
+
+/* Mengatur bagian copyright */
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+    padding: 14px 20px;
+    color: #aeb8c9;
+    font-size: 12px;
+}
+
+/* Menyembunyikan modal secara default */
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(15, 23, 42, 0.76);
+    z-index: 100;
+}
+
+/* Menampilkan modal saat dipanggil */
+.modal:target {
+    display: flex;
+}
+
+/* Mengatur kotak modal */
+.modal-card {
+    position: relative;
+    width: min(520px, 100%);
+    background: var(--cream);
+    border: 2px solid var(--gold);
+    border-radius: 16px;
+    padding: 24px 30px 30px;
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.3);
+}
+
+/* Mengatur tombol tutup modal */
+.modal-close {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    font-size: 31px;
+    line-height: 1;
+    color: #64748b;
+    transition: opacity 0.2s ease;
+}
+
+/* Mengatur efek hover pada tombol tutup */
+.modal-close:hover {
+    opacity: 0.55;
+}
+
+/* Mengatur foto profil */
+.profile-photo {
+    display: block;
+    width: 86px;
+    height: 86px;
+    margin: 4px auto 10px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--teal);
+}
+
+/* Mengatur judul pada modal */
+.modal-card h2 {
+    text-align: center;
+    margin: 0 0 17px;
+    color: var(--navy);
+    font-size: 22px;
+}
+
+/* Mengatur ukuran tabel profil */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Mengatur isi tabel profil */
+.profile-table th,
+.profile-table td {
+    border-bottom: 1px solid var(--border);
+    padding: 11px 12px;
+    text-align: left;
+}
+
+/* Memberikan warna pada kolom header tabel */
+.profile-table th {
+    width: 32%;
+    background: #eef2ff;
+    color: var(--navy);
+}
+
+/* Mengatur efek hover pada baris tabel */
+.profile-table tr:hover td {
+    background: #f0fdfa;
+}
+
+/* Mengatur layout halaman blog */
+.blog-main {
+    max-width: 1180px;
+    margin: 24px auto 80px;
+    padding: 0 16px;
+}
+
+/* Mengatur tampilan artikel blog */
+.blog-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 5px solid var(--teal);
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 3px 10px rgba(23, 37, 84, 0.06);
+}
+
+/* Mengatur judul artikel */
+.blog-card h3 {
+    margin: 0 0 10px;
+    color: var(--navy);
+}
+
+/* Mengatur paragraf artikel */
+.blog-card p {
+    margin: 0 0 13px;
+    color: var(--muted);
+}
+
+/* Mengatur link kembali */
+.back-link {
+    color: var(--teal-dark);
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+/* Mengatur efek hover pada link kembali */
+.back-link:hover {
+    opacity: 0.65;
+}
+
+/* Menghapus jarak atas footer pada halaman blog */
+.blog-footer {
+    margin-top: 0;
+}
+
+/* Mengatur responsivitas untuk layar sedang */
+@media (max-width: 900px) {
+
+    /* Mengubah layout utama menjadi satu kolom */
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mengubah gallery menjadi dua kolom */
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Mengubah sidebar menjadi tiga kolom */
+    .sidebar {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* Mengatur responsivitas untuk layar kecil */
+@media (max-width: 650px) {
+
+    /* Mengubah header menjadi satu kolom */
+    .site-header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    /* Menempatkan logo di tengah header */
+    .header-brand {
+        justify-content: center;
+    }
+
+    /* Menjaga ukuran logo tetap proporsional */
+    .header-brand img {
+        width: 190px;
+        height: 70px;
+    }
+
+    /* Menempatkan teks header di tengah */
+    .header-text {
+        text-align: center;
+    }
+
+    /* Mengizinkan navigasi turun ke baris berikutnya */
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Mengurangi padding pada item navigasi */
+    .main-nav > a,
+    .nav-dropdown > a {
+        padding: 11px 12px;
+    }
+
+    /* Mengubah gallery menjadi satu kolom */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mengubah sidebar menjadi satu kolom */
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    /* Mengubah footer menjadi satu kolom */
+    .footer-top {
+        grid-template-columns: 1fr;
+    }
+}

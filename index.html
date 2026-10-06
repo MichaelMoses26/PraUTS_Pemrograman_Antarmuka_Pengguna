@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website penjualan rumah dan properti">
+    <title>HomeFinder - Properti Rumah</title>
+
+    <!-- Menghubungkan halaman dengan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header website -->
+    <header class="site-header">
+
+        <!-- Area logo -->
+        <div class="header-brand">
+            <img src="images/Logo.png" alt="Logo HomeFinder">
+        </div>
+
+        <!-- Nama dan slogan website -->
+        <div class="header-text">
+            <h1>HomeFinder</h1>
+            <p>Temukan Rumah Impian untuk Keluarga Anda</p>
+        </div>
+
+    </header>
+
+    <!-- Navigasi utama -->
+    <nav class="main-nav" aria-label="Navigasi utama">
+
+        <!-- Menu utama -->
+        <a href="index.html">Home</a>
+
+        <!-- Menu tentang kami -->
+        <a href="#about">Tentang Kami</a>
+
+        <!-- Menu properti dan dropdown -->
+        <div class="nav-dropdown">
+
+            <a href="#services">Properti</a>
+
+            <!-- Isi dropdown properti -->
+            <div class="submenu">
+                <a href="#gallery">Daftar Rumah</a>
+                <a href="#services">Informasi Properti</a>
+            </div>
+
+        </div>
+
+        <!-- Menu blog -->
+        <a href="blog.html">Blog</a>
+
+        <!-- Menu contact untuk membuka popup -->
+        <a href="#contact-popup">Contact</a>
+
+    </nav>
+
+    <!-- Area utama website -->
+    <main class="main-layout">
+
+        <!-- Area daftar rumah -->
+        <section class="content-area" aria-label="Daftar properti rumah">
+
+            <!-- Judul daftar rumah -->
+            <div class="section-title">
+                <h2>Daftar Rumah Pilihan</h2>
+            </div>
+
+            <!-- Gallery semua properti -->
+            <div class="gallery-grid" id="gallery">
+
+                <!-- Rumah pertama -->
+                <article class="gallery-card">
+                    <img src="images/rumah1.jpg" alt="Rumah modern minimalis">
+
+                    <div class="card-content">
+                        <h3>Rumah Minimalis Modern</h3>
+
+                        <p>
+                            <strong>Harga:</strong> Rp850.000.000
+                        </p>
+
+                        <p>
+                            <strong>Alamat:</strong> Tangerang, Banten
+                        </p>
+
+                        <p>
+                            <strong>LT:</strong> 90 m² |
+                            <strong>LB:</strong> 72 m²
+                        </p>
+
+                        <p>
+                            <strong>Kamar:</strong> 3 Kamar Tidur
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Rumah kedua -->
+                <article class="gallery-card">
+                    <img src="images/rumah2.jpg" alt="Rumah dua lantai">
+
+                    <div class="card-content">
+                        <h3>Rumah Dua Lantai</h3>
+
+                        <p>
+                            <strong>Harga:</strong> Rp1.250.000.000
+                        </p>
+
+                        <p>
+                            <strong>Alamat:</strong> Bekasi, Jawa Barat
+                        </p>
+
+                        <p>
+                            <strong>LT:</strong> 120 m² |
+                            <strong>LB:</strong> 110 m²
+                        </p>
+
+                        <p>
+                            <strong>Kamar:</strong> 4 Kamar Tidur
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Rumah ketiga -->
+                <article class="gallery-card">
+                    <img src="images/rumah3.jpg" alt="Rumah keluarga dengan taman">
+
+                    <div class="card-content">
+                        <h3>Rumah Keluarga Sejuk</h3>
+
+                        <p>
+                            <strong>Harga:</strong> Rp975.000.000
+                        </p>
+
+                        <p>
+                            <strong>Alamat:</strong> Depok, Jawa Barat
+                        </p>
+
+                        <p>
+                            <strong>LT:</strong> 105 m² |
+                            <strong>LB:</strong> 80 m²
+                        </p>
+
+                        <p>
+                            <strong>Kamar:</strong> 3 Kamar Tidur
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Rumah keempat -->
+                <article class="gallery-card">
+                    <img src="images/rumah4.jpg" alt="Rumah bergaya klasik">
+
+                    <div class="card-content">
+                        <h3>Rumah Klasik Elegan</h3>
+
+                        <p>
+                            <strong>Harga:</strong> Rp1.450.000.000
+                        </p>
+
+                        <p>
+                            <strong>Alamat:</strong> Jakarta Selatan
+                        </p>
+
+                        <p>
+                            <strong>LT:</strong> 150 m² |
+                            <strong>LB:</strong> 125 m²
+                        </p>
+
+                        <p>
+                            <strong>Kamar:</strong> 4 Kamar Tidur
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Rumah kelima -->
+                <article class="gallery-card">
+                    <img src="images/rumah5.jpg" alt="Rumah modern dengan halaman">
+
+                    <div class="card-content">
+                        <h3>Rumah Modern Asri</h3>
+
+                        <p>
+                            <strong>Harga:</strong> Rp1.100.000.000
+                        </p>
+
+                        <p>
+                            <strong>Alamat:</strong> Bogor, Jawa Barat
+                        </p>
+
+                        <p>
+                            <strong>LT:</strong> 135 m² |
+                            <strong>LB:</strong> 100 m²
+                        </p>
+
+                        <p>
+                            <strong>Kamar:</strong> 4 Kamar Tidur
+                        </p>
+                    </div>
+                </article>
+
+                <!-- Rumah keenam -->
+                <article class="gallery-card">
+                    <img src="images/rumah6.jpg" alt="Rumah sederhana minimalis">
+
+                    <div class="card-content">
+                        <h3>Rumah Nyaman Minimalis</h3>
+
+                        <p>
+                            <strong>Harga:</strong> Rp725.000.000
+                        </p>
+
+                        <p>
+                            <strong>Alamat:</strong> Jakarta Timur
+                        </p>
+
+                        <p>
+                            <strong>LT:</strong> 72 m² |
+                            <strong>LB:</strong> 60 m²
+                        </p>
+
+                        <p>
+                            <strong>Kamar:</strong> 2 Kamar Tidur
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Sidebar informasi -->
+        <aside class="sidebar" aria-label="Informasi properti">
+
+            <!-- Informasi tentang HomeFinder -->
+            <section class="sidebar-box" id="about">
+                <h3>Tentang HomeFinder</h3>
+
+                <p>
+                    HomeFinder adalah konsep website katalog properti
+                    yang membantu pengunjung menemukan rumah berdasarkan
+                    harga, lokasi, luas bangunan, luas tanah, dan jumlah kamar.
+                </p>
+            </section>
+
+            <!-- Navigasi tambahan -->
+            <section class="sidebar-box">
+
+                <h3>Navigasi Lokal</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#about">
+                    Tentang Kami
+                </a>
+
+                <a href="#gallery">
+                    Daftar Rumah
+                </a>
+
+                <a href="#services">
+                    Informasi Properti
+                </a>
+
+                <a href="#contact-popup">
+                    Contact
+                </a>
+
+            </section>
+
+            <!-- Tautan ke website eksternal -->
+            <section class="sidebar-box" id="services">
+
+                <h3>Situs Eksternal</h3>
+
+                <!-- Tautan Lorem Ipsum -->
+                <a
+                    href="https://www.lipsum.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Lorem Ipsum Official
+                </a>
+
+                <!-- Tautan Google -->
+                <a
+                    href="https://www.google.com/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Google Search
+                </a>
+
+                <!-- Tautan Wikipedia -->
+                <a
+                    href="https://www.wikipedia.org/"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Wikipedia
+                </a>
+
+            </section>
+
+        </aside>
+
+    </main>
+
+    <!-- Footer website -->
+    <footer class="site-footer">
+
+        <!-- Isi utama footer -->
+        <div class="footer-top">
+
+            <!-- Informasi HomeFinder -->
+            <section>
+                <h3>Tentang HomeFinder</h3>
+
+                <p>
+                    HomeFinder menyediakan konsep katalog rumah
+                    dengan informasi harga, lokasi, luas properti,
+                    dan fasilitas rumah.
+                </p>
+            </section>
+
+            <!-- Link navigasi cepat -->
+            <section>
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#about">
+                    Tentang Kami
+                </a>
+
+                <a href="#gallery">
+                    Daftar Rumah
+                </a>
+
+                <a href="blog.html">
+                    Blog
+                </a>
+
+            </section>
+
+            <!-- Informasi kontak -->
+            <section>
+
+                <h3>Informasi Kontak</h3>
+
+                <p>
+                    Email: michael.825250008@stu.untar.ac.id
+                </p>
+
+                <p>
+                    Phone: +62 852 1205 5199
+                </p>
+
+                <p>
+                    Address: Jakarta, Indonesia
+                </p>
+
+            </section>
+
+        </div>
+
+        <!-- Copyright website -->
+        <div class="footer-bottom">
+            &copy; 2026 HomeFinder.
+            All rights reserved.
+        </div>
+
+    </footer>
+
+    <!-- Popup identitas mahasiswa -->
+    <div
+        class="modal"
+        id="contact-popup"
+        aria-label="Popup identitas mahasiswa">
+
+        <!-- Kotak isi popup -->
+        <div class="modal-card">
+
+            <!-- Tombol tutup popup -->
+            <a
+                class="modal-close"
+                href="index.html"
+                aria-label="Tutup popup">
+                &times;
+            </a>
+
+            <!-- Foto profil -->
+            <img
+                class="profile-photo"
+                src="images/Profile.jpeg"
+                alt="Foto mahasiswa">
+
+            <h2>
+                Profil Mahasiswa
+            </h2>
+
+            <!-- Tabel identitas mahasiswa -->
+            <table class="profile-table">
+
+                <tr>
+                    <th>NIM</th>
+                    <td>825250008</td>
+                </tr>
+
+                <tr>
+                    <th>Nama</th>
+                    <td>Michael Moses Santoso</td>
+                </tr>
+
+                <tr>
+                    <th>Kelas</th>
+                    <td>SI A</td>
+                </tr>
+
+            </table>
+
+        </div>
+    </div>
+
+</body>
+</html>
